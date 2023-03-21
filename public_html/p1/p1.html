@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Registration form</title>
+        <link rel="stylesheet" href="p1.css">
+
+    </head>
+
+    <body>
+
+
+        <form action="http://alberto.gil.webs.uvigo.es/SINT/22-23/p1.php" id="registration_form" onsubmit="return revision()">
+            <h3>Registration Form</h3>
+
+            <h4>Name and surname</h4> <input type="text" class="inputs_boxes" name="cname" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ]{3,}[ ]{1}[a-zA-ZñÑáéíóúÁÉÍÓÚ]{3,}" title="Write two words, each
+            composed of at least 3 characters (only ASCII letters, ’ñ/Ñ’ and accented vowels)" placeholder="Introduce your name and surname"> 
+
+            <h4>Login</h4> <input type="text" class="inputs_boxes" name="clogin" id="in_login" placeholder="Introduce your login"> 
+            
+            <h4>Password</h4> <input type="password" class="inputs_boxes" name="cpasswd" id="in_passwd" placeholder="Introduce password"> 
+            
+            <h4>ID/DNI</h4> <input type="text" class="inputs_boxes" name="cdni" id="in_dni" placeholder="Introduce your DNI">
+            
+            <h4>Email</h4> <input type="email" class="inputs_boxes" name="cemail" placeholder="Introduce your email address"> <br>
+            
+            <h4>Picture</h4> <input type="file" class="update" name="cfile"> <br><br>
+                
+            <h4>Age Range</h4>
+            <input type="radio" name="cage" value="Less than 25">Less than 25 <br>
+            <input type="radio" name="cage" value="Between 25 and 40">Between 25 and 40 <br>
+            <input type="radio" name="cage" value="Between 40 and  60">Between 40 and  60 <br>
+            <input type="radio" name="cage" value="Over 60">Over 60 <br><br>
+
+            <h4>Preferred music genres</h4>
+            <input type="checkbox" name="cgenre[]" value="Pop" onclick="check()">Pop <br>
+            <input type="checkbox" name="cgenre[]" value="Rock" onclick="check()">Rock <br>
+            <input type="checkbox" name="cgenre[]" value="Country" onclick="check()">Country <br>
+            <input type="checkbox" name="cgenre[]" value="Rap" onclick="check()">Rap <br>
+            <input type="checkbox" name="cgenre[]" value="Soul" onclick="check()">Soul <br><br>
+            <input type="checkbox" name="cgenre[]" id="checkall_box" value="All" onclick="check_all()">Check all <br>
+            <input type="checkbox" name="cgenre_uncheck" id="uncheck_box" value="Uncheck_all" onclick="uncheck()">Uncheck all<br><br>
+
+            <h4>Comment</h4> <textarea class="inputs_boxes" rows=5 style="vertical-align: middle;" name="ccomment"> </textarea> <br>
+
+            <h4>Internet provider</h4>
+            <select name="cInternet" id="options">
+                <option value="R">R</option>
+                <option value="Movistar">Movistar</option>
+                <option value="Vodafone">Vodafone</option>
+                <option value="Orange">Orange</option>
+            </select><br><br>
+
+            <h4>Submission method</h4>
+            <input type="radio" name="cmethod" value="Get" onclick="get_function()" checked>Get <br>
+            <input type="radio" name="cmethod" value="Post" onclick="post_function()">Post <br><br>
+
+            <h4>Submission encoding</h4>
+            <input type="radio" name="cencoding" value="application/x-www-form-urlencoded" checked>application/x-www-form-urlencoded <br>
+            <input type="radio" name="cencoding" value="multipart/form-data" id="multipart" >multipart/form-data <br><br>
+
+            <input type="hidden" name="cbrowser" id="browser" value="">
+            <input type="hidden" name="cdate" id="date" value="">
+            <input type="reset" value="Reset" class="reset_button" onclick="location.reload()">
+            <input type="submit" value="Submit" id="button" class="button">
+            <h6>Carlos Calvo Moa</h6>
+        </form>
+        <script src="p1.js"></script>
+    </body> 
+
+</html>
