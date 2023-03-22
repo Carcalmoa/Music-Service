@@ -1,3 +1,3 @@
 # Music-Service
 
-Este servicio permite al usuario filtrar álbumes de música según el país donde se publicó y el género al que 
+Este servicio permite al usuario filtrar canciones del género pop por el país dónde se publicaron y por el album al que pertenecen. Además, se mostraba el año de publicación, autor y review del album, así como el idioma, género y compositor de las canciones. Toda esta información la extraía de numerosos archivos xml que incluían una selección de álbumes de cada año. De dichos archivos tenía que descartar todos aquellos que no fueran sintácticamente correctos o estuviesen fuera del rango de años requerido. Una vez obtenidos los archivos correctos debía quedarme sólo con las canciones pertenecientes al género pop y almacenarlas para posteriormente filtrarlas por pa
